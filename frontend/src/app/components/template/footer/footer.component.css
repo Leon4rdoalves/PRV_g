@@ -5,6 +5,10 @@
     align-items: center;
     font-weight: 300;
     justify-content: flex-end;
-    background-color: #101010;
+    background-color: #080808;
     font-size: 1rem;
+}
+
+.texto:hover {
+    background-color: #202020;
 }
