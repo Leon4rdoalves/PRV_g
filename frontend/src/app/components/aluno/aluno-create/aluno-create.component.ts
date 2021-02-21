@@ -11,11 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class AlunoCreateComponent implements OnInit {
 
   aluno: Aluno = {
-    id: 10,
-    nome: "Leonardo",
-    email: "leo@leo.com",
-    observacoes: "só testando",
-    
+    nome: "",
+    email: "",
+    observacoes: "",
   }
 
   constructor(private ServAlunoService: ServAlunoService,
