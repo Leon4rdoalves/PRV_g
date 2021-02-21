@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,6 +16,10 @@ import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
+import { AzulDirective } from './directives/azul.directive';
+import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar'; 
 
 
 @NgModule({
@@ -25,7 +30,9 @@ import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
     NavComponent,
     HomeComponent,
     AlunoCrudComponent,
-    ListaCrudComponent
+    ListaCrudComponent,
+    AzulDirective,
+    AlunoCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,9 @@ import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
     MatToolbarModule,
     MatListModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
