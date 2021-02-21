@@ -1,0 +1,16 @@
+{
+    "aluno": [{
+        "id": 1,
+        "nome": "Leonardo Alves",
+        "email": "leonardo@teste.com",
+        "observacoes": "bla bla bla",
+        "turma": "Amarela"
+
+    }],
+    "turma": [{
+        "id": "A1",
+        "descricao": "Noturno",
+        "tipo": "EAD",
+        "participantes": "Leonardo Alves"
+    }]
+}
