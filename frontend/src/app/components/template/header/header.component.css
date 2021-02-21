@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #101010;
+    font-size: 1rem;
+}
+
+.header:hover {
+    background-color: #202020;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo {
+    max-height: 50px;
+}
+
+.inicial i {
+    padding-left: 25px;
+    padding-right: 1px;
+    size: 15px;
+}
+
+.lista i {
+    padding-left: 35px;
+    padding-right: 1px;
+}
+
+.cadastro i {
+    padding-left: 35px;
+    padding-right: 1px;
+}
+
+.inicial:hover {
+    color: #00ffff;
+}
+
+.lista:hover {
+    color: #00ffff;
+}
+
+.cadastro:hover {
+    color: #00ffff;
+}
