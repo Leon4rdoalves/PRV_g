@@ -6,8 +6,10 @@ body {
 }
 
 body {
-    margin: 0;
+    margin: auto;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #131313;
+    text-decoration: none;
 }
 
 .azul {
@@ -19,4 +21,17 @@ body {
     max-height: 35px;
     padding-left: 4px;
     padding-right: 4px;
+}
+
+.nd {
+    text-decoration: none;
+}
+
+a {
+    color: rgb(156, 156, 156);
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #0ff;
 }

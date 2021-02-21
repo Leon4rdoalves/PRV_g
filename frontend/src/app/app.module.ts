@@ -13,6 +13,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
+import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
+import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { MatCardModule } from '@angular/material/card';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    AlunoCrudComponent,
+    ListaCrudComponent
   ],
   imports: [
     BrowserModule,
