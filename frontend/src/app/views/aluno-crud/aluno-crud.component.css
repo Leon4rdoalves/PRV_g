@@ -1,0 +1,10 @@
+.home {
+    background-color: #101010;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2rem;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
