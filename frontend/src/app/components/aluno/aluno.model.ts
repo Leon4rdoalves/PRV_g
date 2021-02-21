@@ -3,6 +3,6 @@ export interface Aluno {
     nome: string
     email: string
     observacoes: string
-    turma: string
+    turma?: string
 }
 

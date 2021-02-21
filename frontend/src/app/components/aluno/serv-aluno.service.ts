@@ -1,5 +1,8 @@
+import { Aluno } from './aluno.model';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -7,7 +10,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ServAlunoService {
 
-  constructor(private snackbar: MatSnackBar) { }
+  baseUrl = "http://93.188.161.223:9000/participantes"
+
+  constructor(private snackbar: MatSnackBar, 
+    private http: HttpClient) { }
 
   mostrar_msg(msg: string): void {
     this.snackbar.open(msg, 'X', {
@@ -15,6 +21,10 @@ export class ServAlunoService {
       horizontalPosition: "right",
       verticalPosition: "top"
     })
+  }
+
+  inserindo(Aluno:Aluno): Observable<Aluno>{
+    return this.http.post<Aluno>(this.baseUrl, Aluno)
   }
 
 }

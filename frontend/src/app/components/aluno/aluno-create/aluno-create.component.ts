@@ -10,6 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunoCreateComponent implements OnInit {
 
+  aluno: Aluno = {
+    id: 10,
+    nome: "Leonardo",
+    email: "leo@leo.com",
+    observacoes: "só testando",
+    
+  }
+
   constructor(private ServAlunoService: ServAlunoService,
     private router: Router) { }
 
@@ -18,7 +26,11 @@ export class AlunoCreateComponent implements OnInit {
   }
 
   salvar(): void {
-    this.ServAlunoService.mostrar_msg('Participante cadastrado com sucesso!')
+    this.ServAlunoService.inserindo(this.aluno).subscribe(() => {
+      this.ServAlunoService.mostrar_msg('Participante cadastrado com sucesso!')
+      this.router.navigate(['/aluno'])
+    })
+    
   }
 
   cancelar(): void {
