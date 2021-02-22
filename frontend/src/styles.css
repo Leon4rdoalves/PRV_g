@@ -31,3 +31,13 @@ a:hover {
     text-decoration: none !important;
     color: #0ff;
 }
+
+.msg-sucesso {
+    background-color: #28a745;
+    color: white;
+}
+
+.msg-erro {
+    background-color: #e94343;
+    color: white;
+}

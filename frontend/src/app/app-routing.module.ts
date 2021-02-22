@@ -1,3 +1,4 @@
+import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
 import { NgModule } from '@angular/core';
@@ -15,16 +16,15 @@ const routes: Routes = [{
   path: "aluno",
   component: AlunoCrudComponent
 },{
-  path: "lista",
-  component: ListaCrudComponent
-},{
   path: "aluno/create",
   component: AlunoCreateComponent
 },{
   path: "aluno/update/:id",
   component: AlunoUpdateComponent
-}
-
+},{
+  path: "aluno/delete/:id",
+  component: AlunoDeleteComponent
+},
 
 ];
 

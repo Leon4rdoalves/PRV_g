@@ -31,6 +31,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
+import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-upda
     AzulDirective,
     AlunoCreateComponent,
     AlunoReadComponent,
-    AlunoUpdateComponent
+    AlunoUpdateComponent,
+    AlunoDeleteComponent
   ],
   imports: [
     BrowserModule,

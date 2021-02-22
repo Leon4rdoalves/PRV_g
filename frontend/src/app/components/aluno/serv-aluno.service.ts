@@ -1,8 +1,9 @@
-import { Aluno } from './aluno.model';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { EMPTY, Observable } from 'rxjs';
+import { Aluno } from './aluno.model';
+import { map, catchError } from 'rxjs/operator';
 
 
 @Injectable({
@@ -15,23 +16,32 @@ export class ServAlunoService {
   constructor(private snackbar: MatSnackBar, 
     private http: HttpClient) { }
 
-  mostrar_msg(msg: string): void {
+  mostrar_msg(msg: string, isError: boolean = false): void {
     this.snackbar.open(msg, 'X', {
       duration: 3000,
       horizontalPosition: "right",
-      verticalPosition: "top"
+      verticalPosition: "top",
+      panelClass: isError ? ["msg-erro"] : ["msg-sucesso"]
     })
   }
 
   inserindo(Aluno:Aluno): Observable<Aluno>{
-    return this.http.post<Aluno>(this.baseUrl, Aluno)
+    return this.http.post<Aluno>(this.baseUrl, Aluno).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
+
+  errorHandler(e: any): Observable<any> {
+    return EMPTY
+  }
+
 
   lendo():Observable<Aluno[]> {
     return this.http.get<Aluno[]>(this.baseUrl)
   }
 
-  lendoid(id: string): Observable<Aluno> {
+  lendoid(id: number): Observable<Aluno> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Aluno>(url)
   }
@@ -41,5 +51,9 @@ export class ServAlunoService {
     return this.http.put<Aluno>(url, aluno)
   }
 
+  deletar(id: number): Observable<Aluno> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Aluno>(url)
+  }
 
 }

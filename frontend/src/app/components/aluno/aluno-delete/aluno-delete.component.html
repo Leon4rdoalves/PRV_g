@@ -1,0 +1,32 @@
+<mat-card class="formulario">
+    <mat-card-title class="titulo">
+        Excluir <span Azul>Participante</span>
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="aluno.nome" name="nome" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [value]="aluno.email" name="email" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Observação" [value]="aluno.observacoes" name="observacoes" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Turma" [value]="aluno.turma" name="turma" disabled>
+        </mat-form-field>
+
+    </form>
+
+    <button mat-raised-button (click)="deletar()" color="warn">
+        Deletar
+    </button>
+
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+
+</mat-card>
