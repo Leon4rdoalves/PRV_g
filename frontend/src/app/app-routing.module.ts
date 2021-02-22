@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
+import { AlunoCreateListaComponent } from './components/aluno/aluno-create-lista/aluno-create-lista.component';
 
 
 const routes: Routes = [{
@@ -27,6 +28,9 @@ const routes: Routes = [{
 },{
   path: "lista",
   component: ListaCrudComponent
+},{
+  path: "lista/create",
+  component: AlunoCreateListaComponent
 }
 
 ];

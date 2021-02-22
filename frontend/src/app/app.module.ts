@@ -32,7 +32,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
-
+import { AlunoCreateListaComponent } from './components/aluno/aluno-create-lista/aluno-create-lista.component';
+import { AlunoReadListaComponent } from './components/aluno/aluno-read-lista/aluno-read-lista.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,9 @@ import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-dele
     AlunoCreateComponent,
     AlunoReadComponent,
     AlunoUpdateComponent,
-    AlunoDeleteComponent
+    AlunoDeleteComponent,
+    AlunoCreateListaComponent,
+    AlunoReadListaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+<mat-card class="formulario">
+    <mat-card-title class="titulo">
+        Nova <span Azul>Turma</span>
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="turma.descricao" name="descricao">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Tipo" [(ngModel)]="turma.tipo" name="tipo">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Participantes" [(ngModel)]="turma.participantes" name="participantes">
+        </mat-form-field>
+
+    </form>
+
+
+
+</mat-card>
