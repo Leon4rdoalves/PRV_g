@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, Observable } from 'rxjs';
 import { Aluno } from './aluno.model';
-import { map, catchError } from 'rxjs/operator';
+import { map, catchError } from 'rxjs/operators';
 
 
 @Injectable({
@@ -13,7 +13,7 @@ export class ServAlunoService {
 
   baseUrl = "http://93.188.161.223:9000/participantes"
 
-  constructor(private snackbar: MatSnackBar, 
+  constructor(private snackbar: MatSnackBar,
     private http: HttpClient) { }
 
   mostrar_msg(msg: string, isError: boolean = false): void {
@@ -25,35 +25,44 @@ export class ServAlunoService {
     })
   }
 
-  inserindo(Aluno:Aluno): Observable<Aluno>{
+  inserindo(Aluno: Aluno): Observable<Aluno> {
     return this.http.post<Aluno>(this.baseUrl, Aluno).pipe(
-      map(obj => obj),
-      catchError(e => this.errorHandler(e))
+      map((obj) => obj), catchError(e => this.errorHandler(e))
     );
   }
 
-  errorHandler(e: any): Observable<any> {
-    return EMPTY
-  }
+  lendo(): Observable<Aluno[]> {
+    return this.http.get<Aluno[]>(this.baseUrl).pipe(
+      map((obj) => obj), catchError(e => this.errorHandler(e))
+    );
 
-
-  lendo():Observable<Aluno[]> {
-    return this.http.get<Aluno[]>(this.baseUrl)
   }
 
   lendoid(id: number): Observable<Aluno> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<Aluno>(url)
+    return this.http.get<Aluno>(url).pipe(
+      map((obj) => obj), catchError(e => this.errorHandler(e))
+    );
   }
 
-  atualizar(aluno: Aluno): Observable<Aluno>{
-    const url = `${this.baseUrl}/${aluno.id}`
-    return this.http.put<Aluno>(url, aluno)
+  atualizar(Aluno: Aluno): Observable<Aluno> {
+    const url = `${this.baseUrl}/${Aluno.id}`
+    return this.http.put<Aluno>(url, Aluno).pipe(
+      map((obj) => obj), catchError(e => this.errorHandler(e))
+    );
   }
 
   deletar(id: number): Observable<Aluno> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Aluno>(url)
+    return this.http.delete<Aluno>(url).pipe(
+      map((obj) => obj), catchError(e => this.errorHandler(e))
+    );
+  }
+
+  errorHandler(e: any): Observable<any> {
+    console.log(e)
+    this.mostrar_msg("Ops, algo deu errado!", true);
+    return EMPTY
   }
 
 }

@@ -28,7 +28,7 @@
 
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef>Ações</th>
-            <td mat-cell *matCellDef="let row">
+            <td class="tdaction" mat-cell *matCellDef="let row">
 
                 <a routerLink="/aluno/update/{{ row.id }}">
                     <i class="material-icons edit">

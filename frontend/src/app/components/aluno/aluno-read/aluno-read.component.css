@@ -2,9 +2,17 @@ table {
     width: 80%;
     align-items: center;
     margin: auto;
+    margin-top: 40px;
     background-color: transparent;
-    color: rgb(245, 241, 241);
-    font-size: 1rem;
+    color: #f5f1f1;
+}
+
+td {
+    font-size: 1.1rem;
+}
+
+.tdaction {
+    width: 68px;
 }
 
 i {

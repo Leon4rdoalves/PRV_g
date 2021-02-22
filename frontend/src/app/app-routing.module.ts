@@ -24,7 +24,10 @@ const routes: Routes = [{
 },{
   path: "aluno/delete/:id",
   component: AlunoDeleteComponent
-},
+},{
+  path: "lista",
+  component: ListaCrudComponent
+}
 
 ];
 

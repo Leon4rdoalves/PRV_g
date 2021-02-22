@@ -8,3 +8,20 @@
     padding-top: 5px;
     padding-bottom: 8px;
 }
+
+button {
+    height: 40px;
+    width: 150px;
+    margin: 30px -50px;
+    position: relative;
+    top: 50%;
+    left: 49%;
+    background-color: #0ff;
+    color: black;
+    background-color: #0ff;
+}
+
+button:hover {
+    background-color: #101010;
+    color: #0ff;
+}

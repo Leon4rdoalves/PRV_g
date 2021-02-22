@@ -15,7 +15,7 @@ export class AlunoUpdateComponent implements OnInit {
   constructor(private ServAlunoService: ServAlunoService,
     private router: Router,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')
@@ -24,7 +24,7 @@ export class AlunoUpdateComponent implements OnInit {
     });
   }
 
-  atualizar(): void {
+  atualizar_p(): void {
     this.ServAlunoService.atualizar(this.aluno).subscribe(() => {
       this.ServAlunoService.mostrar_msg('Participante atualizado com sucesso!')
       this.router.navigate(["/aluno"]);

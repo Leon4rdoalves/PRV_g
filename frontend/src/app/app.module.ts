@@ -33,6 +33,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
