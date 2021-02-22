@@ -27,4 +27,19 @@ export class ServAlunoService {
     return this.http.post<Aluno>(this.baseUrl, Aluno)
   }
 
+  lendo():Observable<Aluno[]> {
+    return this.http.get<Aluno[]>(this.baseUrl)
+  }
+
+  lendoid(id: string): Observable<Aluno> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Aluno>(url)
+  }
+
+  atualizar(aluno: Aluno): Observable<Aluno>{
+    const url = `${this.baseUrl}/${aluno.id}`
+    return this.http.put<Aluno>(url, aluno)
+  }
+
+
 }

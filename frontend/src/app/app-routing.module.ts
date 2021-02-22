@@ -1,3 +1,4 @@
+import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 import { AlunoCreateComponent } from './components/aluno/aluno-create/aluno-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,7 +20,11 @@ const routes: Routes = [{
 },{
   path: "aluno/create",
   component: AlunoCreateComponent
+},{
+  path: "aluno/update/:id",
+  component: AlunoUpdateComponent
 }
+
 
 ];
 

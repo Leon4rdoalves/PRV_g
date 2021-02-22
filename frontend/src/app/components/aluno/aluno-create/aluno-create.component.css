@@ -2,3 +2,14 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+button {
+    margin: 25px 15px 0px 0px;
+    background-color: aqua;
+    color: black;
+}
+
+button:hover {
+    background-color: #101010;
+    color: #0ff;
+}

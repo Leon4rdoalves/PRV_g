@@ -25,7 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }from '@angular/forms';
 import { MatFormFieldModule }from '@angular/material/form-field';
 import { MatInputModule }from '@angular/material/input';
+import { AlunoReadComponent } from './components/aluno/aluno-read/aluno-read.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-update.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,9 @@ import { MatInputModule }from '@angular/material/input';
     AlunoCrudComponent,
     ListaCrudComponent,
     AzulDirective,
-    AlunoCreateComponent
+    AlunoCreateComponent,
+    AlunoReadComponent,
+    AlunoUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,10 @@ import { MatInputModule }from '@angular/material/input';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
