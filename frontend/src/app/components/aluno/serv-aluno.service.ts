@@ -1,3 +1,4 @@
+import { Turma } from './turma.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -12,6 +13,7 @@ import { map, catchError } from 'rxjs/operators';
 export class ServAlunoService {
 
   baseUrl = "http://93.188.161.223:9000/participantes"
+  baseUrlTurma = "http://93.188.161.223:9000/turma"
 
   constructor(private snackbar: MatSnackBar,
     private http: HttpClient) { }
@@ -35,7 +37,12 @@ export class ServAlunoService {
     return this.http.get<Aluno[]>(this.baseUrl).pipe(
       map((obj) => obj), catchError(e => this.errorHandler(e))
     );
+  }
 
+  lendoTurma(): Observable<Turma[]> {
+    return this.http.get<Turma[]>(this.baseUrlTurma).pipe(
+      map(obj => obj), catchError(e => this.errorHandler(e))
+    )
   }
 
   lendoid(id: number): Observable<Aluno> {
