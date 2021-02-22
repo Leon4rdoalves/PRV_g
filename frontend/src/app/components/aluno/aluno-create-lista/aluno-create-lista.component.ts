@@ -22,4 +22,9 @@ export class AlunoCreateListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  salvar(): void {
+    
+
+  }
+
 }

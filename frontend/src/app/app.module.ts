@@ -34,6 +34,7 @@ import { AlunoUpdateComponent } from './components/aluno/aluno-update/aluno-upda
 import { AlunoDeleteComponent } from './components/aluno/aluno-delete/aluno-delete.component';
 import { AlunoCreateListaComponent } from './components/aluno/aluno-create-lista/aluno-create-lista.component';
 import { AlunoReadListaComponent } from './components/aluno/aluno-read-lista/aluno-read-lista.component';
+import { FormListaComponent } from './components/lista/form-lista/form-lista.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AlunoReadListaComponent } from './components/aluno/aluno-read-lista/alu
     AlunoUpdateComponent,
     AlunoDeleteComponent,
     AlunoCreateListaComponent,
-    AlunoReadListaComponent
+    AlunoReadListaComponent,
+    FormListaComponent
   ],
   imports: [
     BrowserModule,
