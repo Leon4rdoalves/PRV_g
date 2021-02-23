@@ -22,16 +22,4 @@ export class AlunoCreateListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  salvar(): void {
-    this.ServAlunoService.inserindoTurma(this.turma).subscribe(() => {
-      this.ServAlunoService.mostrar_msg('Turma cadastrada com sucesso!')
-      this.router.navigate(['/lista'])
-
-  })
-}
-
-cancelar(): void {
-  this.router.navigate(['/lista'])
-}
-
 }

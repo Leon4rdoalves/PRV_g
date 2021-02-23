@@ -4,11 +4,11 @@
     </mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Descrição" [(ngModel)]="turma.descricao" name="descricao" required>
+            <input matInput placeholder="Descrição" [(ngModel)]="turma.descricao" name="descricao">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Tipo" [(ngModel)]="turma.tipo" name="tipo" required>
+            <input matInput placeholder="Tipo" [(ngModel)]="turma.tipo" name="tipo">
         </mat-form-field>
 
         <mat-form-field>
@@ -18,12 +18,5 @@
     </form>
 
 
-    <button class="bt-salvar" mat-raised-button (click)="salvar()">
-        Salvar
-    </button>
-
-    <button class="bt-cancelar" mat-raised-button (click)="cancelar()">
-        Cancelar
-    </button>
 
 </mat-card>
