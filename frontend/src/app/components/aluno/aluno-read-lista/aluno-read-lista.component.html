@@ -25,13 +25,13 @@
             <th mat-header-cell *matHeaderCellDef>Ações</th>
             <td class="tdaction" mat-cell *matCellDef="let row">
 
-                <a routerLink="">
+                <a routerLink="/lista/update/{{ row.id }}">
                     <i class="material-icons edit">
                         edit
                     </i>
                 </a>
 
-                <a routerLink="">
+                <a routerLink="/lista/delete/{{ row.id }}">
                     <i class="material-icons delete">
                         delete
                     </i>

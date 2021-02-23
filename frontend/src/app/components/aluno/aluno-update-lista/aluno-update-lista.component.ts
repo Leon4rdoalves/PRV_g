@@ -23,7 +23,7 @@ export class AlunoUpdateListaComponent implements OnInit {
     });
   }
 
-  atualizarTurma(): void {
+  atualizarT(): void {
     this.ServAlunoService.atualizarTurma(this.turma).subscribe(() => {
       this.ServAlunoService.mostrar_msg('Turma atualizado com sucesso!')
       this.router.navigate(["/lista"]);

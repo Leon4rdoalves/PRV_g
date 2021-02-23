@@ -1,7 +1,9 @@
 <mat-card class="formulario">
+
     <mat-card-title class="titulo">
         Atualizar <span Azul>Turma</span>
     </mat-card-title>
+
     <form>
         <mat-form-field>
             <input matInput placeholder="Descrição" [(ngModel)]="turma.descricao" name="descricao" required>
@@ -18,7 +20,7 @@
     </form>
 
 
-    <button class="bt-atualizar" mat-raised-button (click)="atualizarTurma()">
+    <button class="bt-atualizar" mat-raised-button (click)="atualizarT()">
         Atualizar
     </button>
 

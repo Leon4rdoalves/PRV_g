@@ -1,3 +1,5 @@
+import { AlunoDeleteListaComponent } from './components/aluno/aluno-delete-lista/aluno-delete-lista.component';
+import { AlunoUpdateListaComponent } from './components/aluno/aluno-update-lista/aluno-update-lista.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -50,7 +52,9 @@ import { AlunoReadListaComponent } from './components/aluno/aluno-read-lista/alu
     AlunoUpdateComponent,
     AlunoDeleteComponent,
     AlunoCreateListaComponent,
-    AlunoReadListaComponent
+    AlunoReadListaComponent,
+    AlunoUpdateListaComponent,
+    AlunoDeleteListaComponent
   ],
   imports: [
     BrowserModule,
