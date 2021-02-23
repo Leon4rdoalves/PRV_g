@@ -9,6 +9,8 @@ import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
 import { AlunoCreateListaComponent } from './components/aluno/aluno-create-lista/aluno-create-lista.component';
 import { FormListaComponent } from './components/lista/form-lista/form-lista.component';
+import { AlunoDeleteListaComponent } from './components/aluno/aluno-delete-lista/aluno-delete-lista.component';
+import { AlunoUpdateListaComponent } from './components/aluno/aluno-update-lista/aluno-update-lista.component';
 
 
 const routes: Routes = [{
@@ -33,11 +35,11 @@ const routes: Routes = [{
   path: "lista/create",
   component: AlunoCreateListaComponent
 },{
-  path: "lista/nova", 
-  component: FormListaComponent
+  path: "lista/delete/:id",
+  component: AlunoDeleteListaComponent
 },{
-  path: "lista/editar",
-  component: FormListaComponent
+  path: "lista/update/:id",
+  component: AlunoUpdateListaComponent
 }
  
 ];

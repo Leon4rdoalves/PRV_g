@@ -4,15 +4,15 @@
     </mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="aluno.nome" name="nome">
+            <input matInput placeholder="Nome" [(ngModel)]="aluno.nome" name="nome" required>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="E-mail" [(ngModel)]="aluno.email" name="email">
+            <input matInput placeholder="E-mail" [(ngModel)]="aluno.email" name="email" required aria-disabled="false">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Observação" [(ngModel)]="aluno.observacoes" name="observacoes">
+            <input matInput placeholder="Observação" [(ngModel)]="aluno.observacoes" name="observacoes" required>
         </mat-form-field>
 
         <mat-form-field>

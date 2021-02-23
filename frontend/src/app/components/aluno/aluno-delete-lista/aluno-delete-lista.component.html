@@ -1,0 +1,29 @@
+<mat-card class="formulario">
+    <mat-card-title class="titulo">
+        Excluir <span Azul>Turma</span>
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="turma.descricao" name="descricao" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Tipo" [(ngModel)]="turma.tipo" name="tipo" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Participantes" [(ngModel)]="turma.participantes" name="participantes">
+        </mat-form-field>
+
+    </form>
+
+
+    <button class="bt-deletar" mat-raised-button (click)="deletarTurma()" color="warn">
+        Deletar
+    </button>
+
+    <button class="bt-cancelar" mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+
+</mat-card>
