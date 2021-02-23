@@ -8,7 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { AlunoCrudComponent } from './views/aluno-crud/aluno-crud.component';
 import { ListaCrudComponent } from './views/lista-crud/lista-crud.component';
 import { AlunoCreateListaComponent } from './components/aluno/aluno-create-lista/aluno-create-lista.component';
-import { FormListaComponent } from './components/lista/form-lista/form-lista.component';
+/* import { FormListaComponent } from './components/lista/form-lista/form-lista.component';> */
 import { AlunoDeleteListaComponent } from './components/aluno/aluno-delete-lista/aluno-delete-lista.component';
 import { AlunoUpdateListaComponent } from './components/aluno/aluno-update-lista/aluno-update-lista.component';
 
