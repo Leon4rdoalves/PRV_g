@@ -31,7 +31,7 @@ export class AlunoCreateListaComponent implements OnInit {
   }
 
   cancelar(): void {
-    this.router.navigate(['/lista'])
+    this.router.navigate(['/aluno'])
   }
 
 }
