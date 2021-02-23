@@ -18,4 +18,9 @@ export class AlunoCrudComponent implements OnInit {
     this.router.navigate(['aluno/create'])
   }
 
+  navnovaturma(): void {
+    this.router.navigate(["/lista/create"])
+  }
+
+
 }
