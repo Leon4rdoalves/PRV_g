@@ -1,4 +1,4 @@
-# Exercicio com HTML5 + CSS3 + JavaScript + Angular9
+# Exercício com HTML5 + CSS3 + JavaScript + Angular9
 
 --- 
 
